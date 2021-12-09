@@ -1,3 +1,8 @@
+<%-- 
+    Document   : Headerjsp
+    Created on : Dec 9, 2021, 11:11:46 AM
+    Author     : USER
+--%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -11,6 +16,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
             #Header {
                 top: 0px;
                 left: 0px;
@@ -72,9 +82,9 @@ and open the template in the editor.
     </head>
     <body>
       <div id = "Header">
-          <div><h4 id="HeaderHotelName">HOTEL LYSANDER</h4></div>
+          <div><h4 id="HeaderHotelName"><a href="">HOTEL LYSANDER</a></h4></div>
           <div><h4 id="HeaderCountry">Sri Lanka</h4></div>
-          <div><h4 id="HeaderAboutUs">About-US</h4></div>
+          <div><h4 id="HeaderAboutUs"><a href="">About-US</a></h4></div>
           <div><img src="Images/icons8-geography-50.png" alt="world-wibe-web-image" id="WorldWideWebImage"></div>
           <div><h4 id="HeaderLanguage">English</h4></div>
       </div>
