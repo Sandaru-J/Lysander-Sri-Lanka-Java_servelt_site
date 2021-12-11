@@ -7,7 +7,7 @@
 <title>Web 1920 – 1</title>
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
-		--web-view-name: Web 1920 – 1;
+		--web-view-name:Web;
 		--web-view-id: Web_1920__1;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
@@ -15,6 +15,11 @@
 	:root {
 		--web-view-ids: Web_1920__1;
 	}
+	/* body {
+    	margin: 0;
+    	width: 100vw;
+    	height: 100vh;
+	} */
 	* {
 		margin: 0;
 		padding: 0;
@@ -44,7 +49,7 @@
 		font-style: normal;
 		font-weight: bold;
 		font-size: 20px;
-		color: rgba(255,255,255,1);
+		color: rgba(255,255,255,1);		
 	}
 	#CONTACT_US {
 		left: 4px;
@@ -112,7 +117,14 @@
 		font-weight: bold;
 		font-size: 25px;
 		color: rgba(174,147,100,1);
+		
 	}
+	#HOTEL_LYSANDER:hover{
+		 text-decoration: none;
+		color: rgb(253, 160, 0);
+		cursor:pointer ; 
+	}
+	
 	#Line_1 {
 		fill: transparent;
 		stroke: rgba(114,98,73,1);
@@ -131,6 +143,7 @@
 		top: 25.5px;
 		transform: matrix(1,0,0,1,0,0);
 	}
+	
 	#SRI_LANKA {
 		left: 480px;
 		top: 35px;
@@ -166,7 +179,7 @@
 		transform: matrix(1,0,0,1,0,0);
 	}
 	#Path_2 {
-		fill: rgba(255,255,255,1);
+		fill: rgb(250, 250, 250);
 	}
 	.Path_2 {
 		overflow: visible;
@@ -177,6 +190,47 @@
 		top: 0px;
 		transform: matrix(1,0,0,1,0,0);
 	}
+	#Path_2 :hover{
+		fill: rgb(0, 0, 0);
+	}
+	#Icon_ionic-ios-arrow-dropdown {
+  		position: relative;
+  		display: inline-block;
+}
+	#dropdown-arrow {
+		top: 5px;
+		display: none;
+		position: absolute;
+		background-color: #0c0c0c2a;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+}
+
+	#dropdown-arrow a {
+		color: rgb(245, 238, 238);
+		padding: 12px 16px;
+		text-decoration: none;
+		font: 1em sans-serif;
+		display: block;
+}
+
+	#dropdown-arrow a:hover {
+		background-color: #ccb80050;
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+		color: rgb(255, 187, 0);
+		cursor: pointer;
+	}
+
+	#Icon_ionic-ios-arrow-dropdown:hover #dropdown-arrow {
+  		display: block;
+}
+
+	#dropdown:hover #Icon_ionic-ios-arrow-dropdown {
+  		background-color: #3e8e41;
+}
 	#ABOUT_US_r {
 		left: 1505px;
 		top: 34px;
@@ -190,6 +244,11 @@
 		font-weight: bold;
 		font-size: 18px;
 		color: rgba(255,255,255,1);
+	}
+	#ABOUT_US_r:hover{
+		 text-decoration: none;
+		color: rgb(253, 160, 0);
+		cursor:pointer ; 
 	}
 	#Icon_ionic-ios-arrow-dropdown_s {
 		position: absolute;
@@ -232,6 +291,10 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
+	#Line_2 :hover{
+		stroke: rgb(253, 160, 0);
+		fill: rgb(253, 160, 0);
+	}
 	.Line_2 {
 		overflow: visible;
 		position: absolute;
@@ -243,6 +306,13 @@
 	}
 	#Icon_material-language {
 		fill: rgba(255,255,255,1);
+		
+	}
+	#Icon_material-language:hover{
+		fill: rgb(255, 187, 0);
+	}
+	.Icon_material-language:hover{
+		fill: rgb(255, 187, 0);
 	}
 	.Icon_material-language {
 		overflow: visible;
@@ -268,13 +338,18 @@
 		color: rgba(255,255,255,1);
 	}
 	#Rectangle_5 {
-		fill: rgba(0,0,0,1);
+		fill: rgba(99, 97, 92, 0.534);		
+		opacity: 1;
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
+		filter: blur(7px);
 		stroke: rgba(112,112,112,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
 		stroke-linecap: butt;
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
+		
 	}
 	.Rectangle_5 {
 		position: absolute;
@@ -357,7 +432,7 @@
 		overflow: visible;
 	}
 	#Rectangle_6 {
-		fill: rgba(113,97,72,1);
+		fill: rgb(59, 41, 13);
 	}
 	.Rectangle_6 {
 		position: absolute;
@@ -413,6 +488,58 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,255,255,1);
+		text-decoration: none;		
+	}
+	#dropdown {
+  		position: relative;
+  		display: inline-block;
+	}
+		#dropdown-content {
+		display: none;
+		border: solid 4px rgb(170, 170, 170);
+		left: 285px;
+		top: 255px;
+		position: absolute; 
+		background-color: #f5f5f546;
+		max-width: 350px;
+		height: auto;
+		box-shadow: 0px 8px 16px 0px rgba(255, 197, 5, 0.2);
+		padding: 12px 16px;
+		z-index: 1;
+		font: 1em sans-serif;
+		text-align: center;
+		opacity: 1;
+		}
+
+		#divRooms:hover #dropdown-content {
+  		display:inline-block; 
+}
+	#Rooms__Suits:hover{
+		color: rgb(83, 68, 40);
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+	#Rooms__Suits:active{
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+
+	#Rooms_Suits:hover{
+		/* fill: transparent;
+		stroke: rgba(174,147,100,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto; 
+		text-decoration: underline;
+
+		overflow: visible;
+		position: absolute;
+		width: 120px;
+		height: 3px;
+		left: 292.5px;
+		top: 249.5px;
+		transform: matrix(1,0,0,1,0,0); */
+		
 	}
 	#Dining {
 		left: 614px;
@@ -427,7 +554,16 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,255,255,1);
+		text-decoration: none;
 	}
+	#Dining:hover{
+		color: rgb(83, 68, 40);
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+	#Dining:active{
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+
 	#WELLNESS {
 		left: 861px;
 		top: 228px;
@@ -441,8 +577,16 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,255,255,1);
+		text-decoration: none;
 	}
-	#OFFERS {
+	#WELLNESS:hover{
+		color: rgb(83, 68, 40);
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+	#WELLNESS:active{
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+	#OFFERS{
 		left: 1155px;
 		top: 228px;
 		position: absolute;
@@ -455,6 +599,14 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,255,255,1);
+		text-decoration: none;
+	}
+	#OFFERS:hover{
+		color: rgb(83, 68, 40);
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+	}
+	#OFFERS:active{
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
 	}
 	#EVENTS {
 		left: 1414px;
@@ -469,6 +621,15 @@
 		font-weight: normal;
 		font-size: 20px;
 		color: rgba(255,255,255,1);
+		text-decoration: none;
+	}
+	#EVENTS:hover{
+		color: rgb(83, 68, 40);
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
+
+	}
+	#EVENTS:active{
+		text-decoration: underline rgba(174,147,100,1) solid 5px;
 	}
 	#HOME_bc {
 		left: 108px;
@@ -484,7 +645,21 @@
 		font-size: 20px;
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.5px;
+		text-decoration: none;
 	}
+	 /*#HOME_bc:hover{
+		color: rgb(153, 33, 33);
+		cursor:pointer;
+		color: rgb(196, 173, 42);
+		text-decoration: none;
+	} */	
+	 #HOME_bc:hover{
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.3);
+		transform: scale(1.2);
+		color: rgb(255, 187, 0);
+		cursor: pointer;
+}  
 	#Rectangle_7 {
 		fill: rgba(255,255,255,1);
 		stroke: rgba(112,112,112,1);
@@ -712,7 +887,7 @@
 		top: 1039.576px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Line_8 {
+	/* #Line_8 {
 		fill: transparent;
 		stroke: rgba(174,147,100,1);
 		stroke-width: 3px;
@@ -729,10 +904,10 @@
 		left: 292.5px;
 		top: 249.5px;
 		transform: matrix(1,0,0,1,0,0);
-	}
+	} */
 	#Enjoy_Your_Luxury_Living_With_ {
 		left: 542px;
-		top: 834px;
+		top: 866px;
 		position: absolute;
 		overflow: visible;
 		width: 840px;
@@ -742,7 +917,7 @@
 		font-style: normal;
 		font-weight: bold;
 		font-size: 40px;
-		color: rgba(255,255,255,1);
+		color: rgb(0, 0, 0);
 	}
 </style>
 <script id="applicationScript">
@@ -3667,7 +3842,7 @@ window.application = new Application();
 	<div id="ABOUT_US">
 		<span>ABOUT US</span>
 	</div>
-	<img id="n_1aa25d0432b4" src="n_1aa25d0432b4.png" srcset="n_1aa25d0432b4.png 1x, n_1aa25d0432b4@2x.png 2x">
+	<img id="n_1aa25d0432b4" src="Images\slide3.jpg">
 		
 	<svg class="Rectangle_4">
 		<rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="1920" height="92">
@@ -3692,6 +3867,12 @@ window.application = new Application();
 			<path id="Path_2" d="M 3.375 12.37499904632568 C 3.375 17.34663391113281 7.760912895202637 21.375 13.1738166809082 21.375 C 18.58671951293945 21.375 22.97263145446777 17.34663391113281 22.97263145446777 12.37499904632568 C 22.97263145446777 7.403365612030029 18.58671951293945 3.375 13.1738166809082 3.375 C 7.76091194152832 3.375 3.375 7.403365612030029 3.375 12.37499904632568 Z M 19.03426361083984 6.992307662963867 C 20.60301399230957 8.428845405578613 21.46512031555176 10.34134578704834 21.46512031555176 12.37499904632568 C 21.46512031555176 14.40865325927734 20.60301399230957 16.32115364074707 19.03426361083984 17.75769233703613 C 17.47021865844727 19.19855690002441 15.38797092437744 19.99038314819336 13.1738166809082 19.99038314819336 C 10.95966053009033 19.99038314819336 8.877411842346191 19.19855690002441 7.313370704650879 17.75769233703613 C 5.744617462158203 16.32115364074707 4.882510185241699 14.40865325927734 4.882510185241699 12.37499904632568 C 4.882510185241699 10.34134578704834 5.744617462158203 8.428845405578613 7.313370704650879 6.992307662963867 C 8.877411842346191 5.55144214630127 10.95966053009033 4.759615421295166 13.1738166809082 4.759615421295166 C 15.38797092437744 4.759615421295166 17.47021865844727 5.55144214630127 19.03426361083984 6.992307662963867 Z">
 			</path>
 		</svg>
+		<div id="dropdown-arrow">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			<a href="#">Link 4</a>
+			</div>
 	</div>
 	<div id="ABOUT_US_r">
 		<span>ABOUT US</span>
@@ -3747,23 +3928,28 @@ window.application = new Application();
 		<path id="Line_4" d="M 0 0 L 0 31">
 		</path>
 	</svg>
-	<div id="Rooms__Suits">
-		<span>Rooms & Suits</span>
+	<div id="divRooms">
+		<span><a id="Rooms__Suits" href="">Rooms & Suits</a></span>
+		<div id="dropdown-content">
+			<img id="dropImg" src="Images\room.jpg" width="250px" height="auto" >
+		<p>This is that luxuries room<br>
+		her dfadjfdfdfdfdffdsaf</p>
+		</div>
 	</div>
-	<div id="Dining">
-		<span>Dining</span>
+	<div id="emtydiv">
+		<span><a id="Dining" href="">DINING</a></span>
 	</div>
-	<div id="WELLNESS">
-		<span>WELLNESS</span>
+	<div id="emtydiv">
+		<span><a id="WELLNESS" href="">WELLNESS</a></span>
 	</div>
-	<div id="OFFERS">
-		<span>OFFERS</span>
+	<div id="emtydiv">
+		<span><a id="OFFERS" href="">OFFERS</a></span>
 	</div>
-	<div id="EVENTS">
-		<span>EVENTS</span>
+	<div id="emtydiv">
+		<span><a id="EVENTS" href="">EVENTS</a></span>
 	</div>
-	<div id="HOME_bc">
-		<span>HOME</span>
+	<div id="emtydiv">
+		<span><a id="HOME_bc" href="">HOME</a></span>
 	</div>
 	<svg class="Rectangle_7">
 		<rect id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="1483" height="109">
