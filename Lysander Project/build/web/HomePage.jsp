@@ -282,6 +282,7 @@
 	}
 	#Rectangle_6 {
 		fill: rgba(0,0,0,1);
+		width: 260px;
 	}
 	.Rectangle_6 {
 		position: absolute;
@@ -1936,20 +1937,23 @@
 	<a href="">
 	<div id="Group_2">
 		<svg class="Rectangle_6">
-			<rect id="Rectangle_6" rx="10" ry="10" x="0" y="0" width="164" height="47">
+			<rect id="Rectangle_6" rx="10" ry="10" x="0" y="0" width="224" height="47">
 			</rect>
 		</svg>
 	</div>
-	
+	</a>
+
   <!-- login link in the second header -->
+	<a href="">
   <div id="LOGIN">
-		<span>LOGIN</span>
+		<span>LOGIN / SIGNUP</span>
 	</div>
+	</a>
 	<svg class="Line_4" viewBox="0 0 2 31">
 		<path id="Line_4" d="M 0 0 L 0 31">
 		</path>
 	</svg>
-	</a>
+	
 
 	<!-- Rooms and Suits link in the header -->
 	<a href="">
@@ -2408,9 +2412,16 @@
 </div>
 
 <script>
+	//function to open the choose country window
 	function myFunctionChooseCountryWindowOpen() {
 		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
 	}
+
+	//function to open the login and signup
+	function myFunctionChooseCountryWindowOpen() {
+		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+	}
+
 	// fuction to open a window to take reviews if neede like that 
 	function myFunctionGiveReviewWindowOpen() {
 		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
