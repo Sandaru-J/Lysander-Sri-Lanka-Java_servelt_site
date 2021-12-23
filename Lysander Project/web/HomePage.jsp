@@ -10,6 +10,9 @@
     Created on : Dec 23, 2021, 1:42:53 AM
     Author     : USER
 --%>
+<%
+
+%>
 
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -1847,6 +1850,12 @@
   cursor: pointer;
 }
 
+.checkInCheckOutCount {
+	width: 80px;
+	height: 50px;
+  font-size: 30px;
+}
+
 </style>
 
 </head>
@@ -1864,12 +1873,12 @@
 		<span>HOME</span>
 	</div>
 	<div id="CONTACT_US">
-		<span>CONTACT US</span>
+		<span>REVIEW</span>
 	</div>
 	<div id="ABOUT_US">
 		<span>ABOUT US</span>
 	</div>
-	<img id="MicrosoftTeams-image" src="MicrosoftTeams-image.png" srcset="MicrosoftTeams-image.png 1x, MicrosoftTeams-image@2x.png 2x">
+        <img id="MicrosoftTeams-image" src="Images/MicrosoftTeams-image.png">
 
 	<svg class="Rectangle_4">
 		<rect id="Rectangle_4" rx="0" ry="0" x="0" y="0" width="1920" height="92">
@@ -1889,7 +1898,7 @@
 
   <!-- Button to Choose the country in Home Page -->
 	<div id="SRI_LANKA">
-		<button class="button_choose_country">Sri Lanka (Choose Your Country Here)</button>
+		<button class="button_choose_country" onclick="myFunctionChooseCountryWindowOpen()">$ { Country }</button>
 	</div>
 
 	<!-- About Us link in the Header -->
@@ -1986,7 +1995,7 @@
 	
 	<!-- Form to input the CHECK AND RESERVE details in Home Page -->
 	<div>
-		<form action="">
+		<form action="" method="GET">
 			<svg class="Rectangle_7">
 				<rect id="Rectangle_7" rx="0" ry="0" x="0" y="0" width="1483" height="109">
 				</rect>
@@ -2003,7 +2012,7 @@
 			<div id="Check_In">
 				<span>Check In </span>
 			</div>
-			<input type="date" class="Icon_awesome-calendar-check">
+			<input type="date" name="checkInDate" class="Icon_awesome-calendar-check">
 
 			<!-- CheckOut date input in the HomePage -->
 			<svg class="Icon_awesome-calendar-check_be" viewBox="0 0 20.533 23.5">
@@ -2015,26 +2024,22 @@
 				<path id="Line_6" d="M 0 0 L 0 48">
 				</path>
 			</svg>
-			<input type="date" class="Icon_awesome-calendar-check_be">
+			<input type="date" name="checkOutDate" class="Icon_awesome-calendar-check_be">
 
 			<!-- Adults and Childs input in the HomePage -->
       <div>
 			<div id="n__Adult__0_Child" style="display: grid; grid-template-columns: auto  auto;">
 				<div class="dropdown" style=" margin-right: 10px;">
-          <button class="dropbtn">ADULTS</button>
+          <div class="dropbtn">ADULTS</div>
           <div class="dropdown-content">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
+          	<input type="number" name="adultsCount" class="checkInCheckOutCount">
           </div>
         </div>
       
         <div class="dropdown">
-          <button class="dropbtn">CHILDRENS</button>
+          <div class="dropbtn">CHILDRENS</div>
           <div class="dropdown-content">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
+          	<input type="number" name="childrensCount" class="checkInCheckOutCount">
           </div>
         </div>
       </div>
@@ -2047,11 +2052,11 @@
 			</svg>
 			<svg class="Line_7" viewBox="0 0 1 48">
 				<path id="Line_7" d="M 0 0 L 0 48">
-				</path>
+				</path>+-
 			</svg>
 
 			<!-- Button to submit the details in check in and chekout in the homepage -->
-			<button type="submit" style="cursor: pointer;">
+			<button type="submit" name="submit" style="cursor: pointer;">
 			<svg class="Rectangle_8">
 				<rect id="Rectangle_8" rx="0" ry="0" x="0" y="0" width="306" height="109">
 				</rect>
@@ -2401,5 +2406,15 @@
 	</svg>  
 -->
 </div>
+
+<script>
+	function myFunctionChooseCountryWindowOpen() {
+		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+	}
+	// fuction to open a window to take reviews if neede like that 
+	function myFunctionGiveReviewWindowOpen() {
+		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+	}
+	</script>
 </body>
 </html>
