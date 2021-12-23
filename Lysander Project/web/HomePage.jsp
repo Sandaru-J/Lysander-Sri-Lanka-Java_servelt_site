@@ -1946,9 +1946,9 @@
 	</div>
 	</a>
 
+	
   <!-- login link in the second header -->
-  <button id="btnLoginHome" type="">
-	<a href="https://github.com/Sandaru-J/Lysander-Sri-Lanka/tree/main/Lysander%20Project/build/web">
+  <button id="btnLoginHome" type="" onclick="myFunctionChooseLogInSignUp()">
 	<div id="LOGIN">
 		<span>LOGIN / SIGNUP</span>
 	</div>
@@ -2422,8 +2422,8 @@
 	}
 
 	//function to open the login and signup
-	function myFunctionChooseCountryWindowOpen() {
-		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+	function myFunctionChooseLogInSignUp() {
+		window.open("CheckLogInORSignUp.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=500");
 	}
 
 	// fuction to open a window to take reviews if neede like that 
