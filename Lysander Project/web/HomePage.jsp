@@ -307,6 +307,9 @@
 		color: rgba(255,255,255,1);
 		letter-spacing: 0.5px;
 	}
+	#LOGIN:hover{
+		color: darkgoldenrod;
+	}
 	#Line_4 {
 		fill: transparent;
 		stroke: rgba(0,0,0,1);
@@ -1944,8 +1947,9 @@
 	</a>
 
   <!-- login link in the second header -->
-	<a href="">
-  <div id="LOGIN">
+  <button id="btnLoginHome" type="">
+	<a href="https://github.com/Sandaru-J/Lysander-Sri-Lanka/tree/main/Lysander%20Project/build/web">
+	<div id="LOGIN">
 		<span>LOGIN / SIGNUP</span>
 	</div>
 	</a>
@@ -1953,7 +1957,7 @@
 		<path id="Line_4" d="M 0 0 L 0 31">
 		</path>
 	</svg>
-	
+	</button>	
 
 	<!-- Rooms and Suits link in the header -->
 	<a href="">
