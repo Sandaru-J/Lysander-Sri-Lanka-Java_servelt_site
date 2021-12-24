@@ -1952,7 +1952,6 @@
 	<div id="LOGIN">
 		<span>LOGIN / SIGNUP</span>
 	</div>
-	</a>
 	<svg class="Line_4" viewBox="0 0 2 31">
 		<path id="Line_4" d="M 0 0 L 0 31">
 		</path>
@@ -2423,7 +2422,7 @@
 
 	//function to open the login and signup
 	function myFunctionChooseLogInSignUp() {
-		window.open("CheckLogInORSignUp.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=500");
+		window.open("LogInPage.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=700,height=600");
 	}
 
 	// fuction to open a window to take reviews if neede like that 

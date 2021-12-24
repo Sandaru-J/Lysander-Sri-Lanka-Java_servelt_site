@@ -2422,7 +2422,7 @@
 
 	//function to open the login and signup
 	function myFunctionChooseLogInSignUp() {
-		window.open("CheckLogInORSignUp.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=500");
+		window.open("LogInPage.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=700,height=600");
 	}
 
 	// fuction to open a window to take reviews if neede like that 

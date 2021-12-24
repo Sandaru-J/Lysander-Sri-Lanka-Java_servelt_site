@@ -30,6 +30,25 @@
         #form_row_group {
             margin-bottom: 7px;
         }
+        #Lysander_Sign_Up_Header {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgb(113, 97, 72);
+        }
+
+        #label_name {
+            margin-bottom: 2px;
+        }
+
+        #form_row_group {
+            margin-bottom: 7px;
+        }
+		.container2{
+			width: 75%;
+			margin-left: 12.5%;
+		}
     </style>
 </head>
 <body>
@@ -52,6 +71,54 @@
             </div>
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn">LOG IN</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="d-flex justify-content-center" id="Lysander_Sign_Up_Header">
+            <h4>Create your account here</h4>
+        </div>
+        <hr line="100%">
+        <div>
+        <form action="" method="GET">
+            <div class="form-row" id="form_row_group">
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">First Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+                </div>      
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">Last Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+                </div>    
+            </div>
+            <div class="form-group" id="form_row_group">
+                <label for="exampleFormControlInput1" id="label_name">E-mail address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Lysander@gmail.com">
+            </div>
+            <div class="form-row" id="form_row_group">
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">City</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter The City Of Residence">
+                </div>     
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">Country</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter The Country Of Residence">
+                </div> 
+            </div>
+            <div class="form-row" id="form_row_group">
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">NIC</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your NIC Number">
+                </div>      
+                <div class="col">
+                    <label for="exampleFormControlInput1" id="label_name">Phone Number</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Phone Number">
+                </div>    
+            </div>
+            <div class="d-flex justify-content-center">
+                <!-- remove the a tag whenever necacary when the database is connected -->
+                <a href="SignUpSuccess.html"><button type="submit" class="btn">CREATE</button></a>
             </div>
         </form>
         </div>
