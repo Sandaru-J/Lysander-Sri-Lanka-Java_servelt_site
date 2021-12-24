@@ -1952,7 +1952,6 @@
 	<div id="LOGIN">
 		<span>LOGIN / SIGNUP</span>
 	</div>
-	</a>
 	<svg class="Line_4" viewBox="0 0 2 31">
 		<path id="Line_4" d="M 0 0 L 0 31">
 		</path>
