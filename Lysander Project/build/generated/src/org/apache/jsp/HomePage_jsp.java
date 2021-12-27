@@ -2459,7 +2459,7 @@ public final class HomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t//function to open the login and signup\r\n");
       out.write("\tfunction myFunctionChooseLogInSignUp() {\r\n");
-      out.write("\t\twindow.open(\"CheckLogInORSignUp.html\", \"_blank\", \"toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=500\");\r\n");
+      out.write("\t\twindow.open(\"LogInPage.html\", \"_blank\", \"toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=700,height=600\");\r\n");
       out.write("\t}\r\n");
       out.write("\r\n");
       out.write("\t// fuction to open a window to take reviews if neede like that \r\n");
