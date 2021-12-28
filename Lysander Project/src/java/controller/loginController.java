@@ -74,7 +74,7 @@ public class loginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
         
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -89,6 +89,7 @@ public class loginController extends HttpServlet {
             boolean match = con.checkLogin(email,nic);
             if(match==true)
             {
+                out.println("You have successfully logged!!!");
                 RequestDispatcher lrd = request.getRequestDispatcher("HomePage.jsp");
                 lrd.forward(request, response);
             }else

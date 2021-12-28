@@ -60,24 +60,24 @@
 
      <p id="heading">LOG-IN</p><br>
 
-     <form action="" method="POST">
+     <form action="./loginController" method="POST">
 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email">
+               
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Email">
                 <label for="floatingInput">Email Address</label>
               </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="NIC">
+                <input type="text" class="form-control" id="floatingInput" name="nic" placeholder="NIC">
                 <label for="floatingInput">NIC</label>
               </div><br><br>
-
+              <button class="btn" type="submit">Log in</button>
               <p id="signup">If You Don't Have an Account</p>
 
             <div class="d-flex justify-content-center" id="h_login_signup_button">
                 <a href="SignUpPage.html"><button type="submit" class="btn" onclick="myFunctionsignupForm()">SIGN UP</button></a>
             </div>
-
-      </form>
+              </form>
 
    </div>
     </div>
@@ -90,7 +90,7 @@
     <script>
         //function to open signp form
 	function myFunctionsignupForm() {
-		window.open("SignUpPage.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+		window.open("SignUpPage.html");
                 window.close("LoginPage.html");
 	}
     </script>
