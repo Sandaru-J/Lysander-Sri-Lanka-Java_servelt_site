@@ -74,7 +74,7 @@
               <p id="signup">If You Don't Have an Account</p>
 
             <div class="d-flex justify-content-center" id="h_login_signup_button">
-            <a href="SignUpPage.html"><button type="submit" class="btn">SIGN UP</button></a>
+                <a href="SignUpPage.html"><button type="submit" class="btn" onclick="myFunctionsignupForm()">SIGN UP</button></a>
             </div>
 
       </form>
@@ -84,8 +84,15 @@
     
   </div>
 </div>
-      
-<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
 
+          
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-
+    <script>
+        //function to open signp form
+	function myFunctionsignupForm() {
+		window.open("SignUpPage.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
+                window.close("LoginPage.html");
+	}
+    </script>
   </body>
 </html>
