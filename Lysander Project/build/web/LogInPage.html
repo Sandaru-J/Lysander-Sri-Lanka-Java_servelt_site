@@ -66,24 +66,24 @@
 
      <p id="heading">LOG-IN</p><br>
 
-     <form action="" method="POST">
+     <form action="./loginController" method="POST">
 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email">
+                <input type="email" class="form-control" id="floatingInput" name="guest_Email" placeholder="Email">
                 <label for="floatingInput">Email Address</label>
               </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="NIC">
+                <input type="text" class="form-control" id="floatingInput" name="guest_Name" placeholder="NIC">
                 <label for="floatingInput">NIC</label>
               </div>
               <div class="d-grid gap-2 col-6 mx-auto">
-                  <button type="button" class="btn btn-secondary" id="buttons">Log In</button>
+                  <button type="submit" class="btn btn-secondary" id="buttons">Log In</button>
                 </div><br><br>
 
               <p id="signup">If You Don't Have an Account</p>
 
             <div class="d-flex justify-content-center" id="h_login_signup_button">
-            <a href="SignUpPage.html"><button type="submit" class="btn">SIGN UP</button></a>
+            <a href="SignUpPage.html"><button type="submit" class="btn" onclick="myFunctionsignupForm()">SIGN UP</button></a>
             </div>
 
       </form>
@@ -93,8 +93,15 @@
     
   </div>
 </div>
-
+      <script>
+          //function to open the login and signup
+	function myFunctionsignupForm() {
+		window.open("SignUpPage.html");
+                window.close("LogInPage.html");
+	}
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
 </html>
+

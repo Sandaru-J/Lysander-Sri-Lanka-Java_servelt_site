@@ -80,8 +80,8 @@ public class loginController extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         //apply form inputs in to a getter
-        String email = request.getParameter("email");
-        String nic = request.getParameter("nic");
+        String email = request.getParameter("guest_Email");
+        String nic = request.getParameter("guest_Name");
         
         //check matching status of email and nic
         try{
