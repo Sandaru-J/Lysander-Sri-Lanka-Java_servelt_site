@@ -2069,7 +2069,7 @@
 				</rect>
 			</svg>
 			<div id="CHECK__RESERVE">
-				<span>CHECK & RESERVE</span>
+                            <span onclick="goToBooking()">CHECK & RESERVE</span>
 			</div>
 			</button>
 		
@@ -2429,6 +2429,20 @@
 	function myFunctionGiveReviewWindowOpen() {
 		window.open("ChooseCountry.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=500,height=600");
 	}
+        
+        //function to connect to booking page
+        function goToBooking(){
+            var logInfo=false;
+                if(logInfo===true)
+                {
+                window.open("BookingNew.html");
+                }else
+                {
+                window.open("Error.html");
+                window.open("LogInPage.html");
+                }                
+        }
+       
 	</script>
 </body>
 </html>

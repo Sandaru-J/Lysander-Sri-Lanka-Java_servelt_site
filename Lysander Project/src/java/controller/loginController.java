@@ -30,7 +30,7 @@ public class loginController extends HttpServlet {
             out.println("</html>");
         }
     }
-
+    //public boolean logInfo;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
@@ -56,6 +56,7 @@ public class loginController extends HttpServlet {
                 out.println("You have successfully logged!!!");
                 RequestDispatcher lrd = request.getRequestDispatcher("HomePage.jsp");
                 lrd.forward(request, response);
+                //logInfo=true;
             }else
             {
                 out.println("Email and NIC is not matching");
