@@ -15,23 +15,25 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-    <title>Test 2</title>
 
+    <title>Booking & Card Details</title>
     <style>
 
       body
       {
         background-image: url("image.png");  
-        background-attachment:fixed;
+
+        background-attachment: fixed;
       }
 
       #background
       {
-        margin-top: 100px;
-        margin-bottom: 100px;
+
+        margin-top: 50px;
+        margin-bottom: 50px;
       }
-     
-      #column1
+
+      #leftcolumn
       {
         border: 2px;
         border-radius: 20px;
@@ -39,13 +41,30 @@
         margin-left: 50px;
         margin-right: 50px;
       }
-      .bookin
+      #column1
       {
- 
+        border: 2px;
+        border-radius: 20px;
+        opacity: 0.95;
+        margin-left: 50px;
+        margin-right: 50px;
 
+        margin-top: 0px;
+        background-color: transparent;
+      }
+      .heading
+      {
         font-size: 25px;
         color: #9e6c1c;
         text-align: center;
+      }
+
+      .heading#booking
+      {
+        font-size: 35px;
+        color: #9e6c1c;
+        text-align: center;
+        font-weight: bold;
       }
 
       #container1
@@ -57,6 +76,19 @@
       {
         border-radius: 12px;
         background-color: #9e6c1c;
+      }
+      #labels
+      {
+        text-align: center;
+        font-weight: bold;
+      }
+      #labels1
+      {
+        text-align: center;
+      }
+      #textbox
+      {
+        margin-right: 90px;
       }
 
     </style>
@@ -80,11 +112,18 @@
 
     <div class="d-flex-container px-4" id="container_background">
       <div class="row gx-5">
-        <div class="col" id="background">
-         <div class="p-3 border bg-light" id="column1">
 
-          <p class="bookin">BOOK-IN LYSANDER</p>
 
+<table>
+  
+<tr>
+  <td rowspan="2">
+
+        <div class="col" id="background"> <!--LEFT SIDE COLUMN-->
+         <div class="p-3 border bg-light" id="leftcolumn">
+
+          <br><br><p class="heading" id="booking">BOOK-IN LYSANDER</p><br>
+        
           <form action="" method="POST">
 
              <div class="form-group mb-3">
@@ -92,12 +131,12 @@
                 <input class="form-control" type="text" value="Ermac Solutions" aria-label="readonly input example" readonly>
             </div>
                <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Region">
+
+                <input type="text" class="form-control" id="floatingInput" placeholder="Region">
                 <label for="floatingInput">Region</label>
               </div>
              
-            <div class="form-group mb-3"> <!-- Date input -->
-
+            <div class="form-group mb-3">              
               <div class="container1">
   
                 <div class="row align-items-start">
@@ -178,7 +217,7 @@
                             <option value="1">FB</option>
                             <option value="2">HB</option>
                             <option value="3">BB</option>
-                            <option value="3">UFB</option>
+                            <option value="3">RO</option>
                           </select>
                         </div>
             <br>
@@ -187,21 +226,92 @@
               <button type="button" class="btn btn-secondary" id="buttons">Search</button>
               
             </div>
-
+<br><br><br>
 
         </form>
-
          </div>
         </div>
-
-
-        <div class="col" id="background"> <!--RIGHT SIDE COLUMN-->
-          <div class="p-3 border bg-light" id="column1">
+</td>
+<td>
+        <div class="col" id="background"> <!--RIGHT SIDE UP COLUMN-->
+          <div class="p-3 border bg-light" id="rightcolumn">
 
              
 
-              <p class="bookin">Credit Card Details</p>
+              <p class="heading">Rates</p>
 
+              <form action="" method="POST">
+
+                
+
+               <div class="container2 mb-3">
+               
+                <div class="row">
+                   
+                  <div class="col">
+                    <div class="row">
+                  <label for="floatingInput" id="labels">Total Amount</label>
+                </div>
+                  </div>
+                  <div class="col">
+                   
+
+                <div class="form" id="textbox">
+                  
+                  <input type="text" class="form-control" id="floatingInput">
+                  
+
+                </div>
+
+                  </div>
+                </div>
+                
+              </div>
+
+
+<div class="container2 mb-3">
+               
+                <div class="row">
+                   
+                  <div class="col">
+                    <div class="row">
+                  <label for="floatingInput" id="labels">Booking Amount</label>
+                </div>
+                <p id="labels1">(20% of Total Amount)</p>
+                  </div>
+                  <div class="col">
+                   
+
+                <div class="form" id="textbox">
+                  
+                  <input type="text" class="form-control" id="floatingInput">
+                  
+
+                </div>
+
+                  </div>
+                </div>
+                
+              </div>                
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button type="button" class="btn btn-secondary" id="buttons">Reserve</button>
+                </div><br>
+
+
+
+            </form>
+
+
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="col" id="background"> <!--RIGHT SIDE DOWN COLUMN-->
+          <div class="p-3 border bg-light" id="rightcolumn">
+          
+              <p class="heading">Credit Card Details</p>
               <form action="" method="POST">
 
                 <div class="form-floating mb-3">
@@ -266,11 +376,11 @@
 
 
             </form>
-
           </div>
         </div>
 
-            
+      </td>
+</tr>            
         </div>
         </div>
       </div>
