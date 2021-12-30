@@ -2432,14 +2432,14 @@
         
         //function to connect to booking page
         function goToBooking(){
-            var logInfo=false;
+            var logInfo=true;
                 if(logInfo===true)
                 {
                 window.open("BookingNew.html");
                 }else
                 {
                 window.open("Error.html");
-                window.open("LogInPage.html");
+                //window.open("LogInPage.html");
                 }                
         }
        
