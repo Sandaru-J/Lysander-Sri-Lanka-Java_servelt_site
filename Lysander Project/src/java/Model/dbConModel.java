@@ -28,9 +28,5 @@ public class dbConModel {
         }
 
         return st;
-
     }
-
-   
-        
 }
