@@ -21,7 +21,7 @@ public class signpController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //processRequest(request, response);
-        
+
         //Taking the data from the form
         String FName = request.getParameter("guestFName");
         String LName = request.getParameter("guestLName");
@@ -30,9 +30,8 @@ public class signpController extends HttpServlet {
         String Nic = request.getParameter("guestNic");
         int PhoneNumber = Integer.parseInt(request.getParameter("guestPhoneNumber"));
 
-        
         //check if the data is empty
-        if(FName.isEmpty() || LName.isEmpty() || Email.isEmpty() || Country.isEmpty() || Nic.isEmpty()) {
+        if (FName.isEmpty() || LName.isEmpty() || Email.isEmpty() || Country.isEmpty() || Nic.isEmpty()) {
             response.sendRedirect("http://localhost:8080/Lysander_Project/SignUpPage.html");
         } else {
             //creating the object for signUpModel class
@@ -45,11 +44,11 @@ public class signpController extends HttpServlet {
             signUpModelobj.setguestCountry(Country);
             signUpModelobj.setguestNic(Nic);
             signUpModelobj.setguestPhoneNumber(PhoneNumber);
-            
+
             //validate function
-            if(signUpModelobj.InputValidate()) {
-                dbconModel dbconModelobj = new dbconModel();
-                if(dbConModel.()) {
+            if (signUpModelobj.InputValidate()) {
+                dbConModel dbConModelObj = new dbConModel();
+                if (dbConModelObj.userSignUp(FName, LName, Country, Email, Nic, Country)) {
                     //redirect to successfully sign up
                 } else {
                     //redirect to error page
