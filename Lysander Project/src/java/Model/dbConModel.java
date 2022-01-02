@@ -30,4 +30,23 @@ public class dbConModel {
         return st;
 
     }
+
+    public boolean userSignUp(String guestFname, String guestLName, String guestPhone, String guestEmail, String guestNic, String guestCountry) throws ClassNotFoundException, SQLException {
+        PreparedStatement psSignUp = createConnection().prepareStatement("insert into student values(?,?,?,?,?,?)");
+        psSignUp.setString(1, guestFname);
+        psSignUp.setString(2, guestLName);
+        psSignUp.setString(3, guestPhone);
+        psSignUp.setString(3, guestEmail);
+        psSignUp.setString(4, guestNic);
+        psSignUp.setString(5, guestCountry);
+        int i = psSignUp.executeUpdate();
+
+        if (i > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+        
 }

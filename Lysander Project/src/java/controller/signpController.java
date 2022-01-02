@@ -1,6 +1,7 @@
 package controller;
 
 import Model.signUpModel;
+import Model.dbConModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -47,7 +48,8 @@ public class signpController extends HttpServlet {
             
             //validate function
             if(signUpModelobj.InputValidate()) {
-                if(signUpModelobj.databaseSignUpDataInput()) {
+                dbconModel dbconModelobj = new dbconModel();
+                if(dbConModel.()) {
                     //redirect to successfully sign up
                 } else {
                     //redirect to error page
