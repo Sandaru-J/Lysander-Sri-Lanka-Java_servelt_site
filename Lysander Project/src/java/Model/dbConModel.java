@@ -13,7 +13,7 @@ public class dbConModel {
 
     public Connection createConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
          Statement st=con.createStatement();
              System.out.println("connection established successfully...!!");
         return con;

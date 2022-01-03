@@ -32,33 +32,6 @@ public class signpController extends HttpServlet {
         String Nic = request.getParameter("guestNic");
         String PhoneNumber = request.getParameter("guestPhoneNumber");
 
-        
-        //check if the data is empty
-        /*if(FName.isEmpty() || LName.isEmpty() || Email.isEmpty() || Country.isEmpty() || Nic.isEmpty()) {
-            response.sendRedirect("http://localhost:8080/Lysander_Project/SignUpPage.html");
-        } else {
-            //creating the object for signUpModel class
-            signUpModel signUpModelobj = new signUpModel();
-
-            //Passing the data into the signUpModel clas using getters and setters
-            signUpModelobj.setguestFName(FName);
-            signUpModelobj.setguestLName(LName);
-            signUpModelobj.setguestEmail(Email);
-            signUpModelobj.setguestCountry(Country);
-            signUpModelobj.setguestNic(Nic);
-            signUpModelobj.setguestPhoneNumber(PhoneNumber);
-            
-            //validate function
-            if(signUpModelobj.InputValidate()) {
-                if(signUpModelobj.databaseSignUpDataInput()) {
-                    //redirect to successfully sign up
-                } else {
-                    //redirect to error page
-                }
-            } else {
-                response.sendRedirect("http://localhost:8080/Lysander_Project/SignUpPage.html");
-            }
-        }*/
         try {
                dbConModel con=new dbConModel();
                boolean rslt=con.regUser(FName,LName,Email,Country,Nic,PhoneNumber);
