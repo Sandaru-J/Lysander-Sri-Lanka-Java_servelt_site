@@ -2,7 +2,7 @@ package Model;
 
 import java.util.regex.Pattern;
 
-public class signUpModel {
+/*public class signUpModel {
     
     //Declaring the variables
     private String guestFName;
@@ -42,4 +42,4 @@ public class signUpModel {
     public boolean databaseSignUpDataInput() {
         return true;
     }
-}
+}*/
