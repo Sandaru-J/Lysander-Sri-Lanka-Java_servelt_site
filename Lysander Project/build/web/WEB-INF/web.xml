@@ -4,9 +4,17 @@
         <servlet-name>ChooseCountryController</servlet-name>
         <servlet-class>ChooseCountryController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>signpController</servlet-name>
+        <servlet-class>controller.signpController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ChooseCountryController</servlet-name>
         <url-pattern>/ChooseCountryController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signpController</servlet-name>
+        <url-pattern>/signpController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
