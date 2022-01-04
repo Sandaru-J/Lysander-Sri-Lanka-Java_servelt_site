@@ -47,11 +47,10 @@ public class dbConModel {
                     ps.setString(6, Pno);
                     int i = ps.executeUpdate();
 
-                    /*if(i > 0) 
+                    if(i > 0) 
                         return true;
                       else
-                        return false;*/
-                    return true;
+                        return false;
                     
                 }
 }

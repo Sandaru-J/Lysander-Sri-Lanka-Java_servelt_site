@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>ChooseCountryController</servlet-name>
-        <servlet-class>ChooseCountryController</servlet-class>
+        <servlet-name>signpController</servlet-name>
+        <servlet-class>controller.signpController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ChooseCountryController</servlet-name>
-        <url-pattern>/ChooseCountryController</url-pattern>
+        <servlet-name>signpController</servlet-name>
+        <url-pattern>/signpController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -14,4 +14,3 @@
         </session-timeout>
     </session-config>
 </web-app>
-
