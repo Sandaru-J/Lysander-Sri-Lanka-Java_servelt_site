@@ -4,9 +4,25 @@
         <servlet-name>signpController</servlet-name>
         <servlet-class>controller.signpController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>dbConFeedback</servlet-name>
+        <servlet-class>Model.dbConFeedback</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FeedbackController</servlet-name>
+        <servlet-class>controller.FeedbackController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signpController</servlet-name>
         <url-pattern>/signpController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dbConFeedback</servlet-name>
+        <url-pattern>/dbConFeedback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeedbackController</servlet-name>
+        <url-pattern>/FeedbackController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
