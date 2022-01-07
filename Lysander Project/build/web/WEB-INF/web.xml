@@ -4,9 +4,28 @@
         <servlet-name>signpController</servlet-name>
         <servlet-class>controller.signpController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FeedbackController</servlet-name>
+        <servlet-class>controller.FeedbackController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>loginController</servlet-name>
+        <servlet-class>controller.loginController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signpController</servlet-name>
         <url-pattern>/signpController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeedbackController</servlet-name>
+        <url-pattern>/FeedbackController</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>HomePage.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>loginController</servlet-name>
+        <url-pattern>/loginController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

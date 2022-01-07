@@ -1845,14 +1845,7 @@
   display: block;
 }
 
-.button_choose_country {
-  background-color: rgba(113,97,72,1);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+
 
 .checkInCheckOutCount {
 	width: 80px;
@@ -1902,7 +1895,7 @@
 
   <!-- Button to Choose the country in Home Page -->
 	<div id="SRI_LANKA">
-		<button class="button_choose_country" onclick="myFunctionChooseCountryWindowOpen()">$ { Country }</button>
+            <p>SRI LANKA</p>
 	</div>
 
 	<!-- About Us link in the Header -->
