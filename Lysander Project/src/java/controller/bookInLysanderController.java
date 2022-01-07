@@ -50,6 +50,8 @@ public class bookInLysanderController extends HttpServlet {
         bookLysanderobj.setKidsCount(kidsCount);
         bookLysanderobj.setPackages(packages);
         
+        //forward to bookInLysanderRateController
+        
     }
 
     @Override

@@ -4,6 +4,17 @@
     Author     : USER
 --%>
 
+<%@ page import="java.util.*" %>
+<%@page import="Model.bookInLysanderRateModel"%>
+<%
+    bookInLysanderRateModel lysanderRateModelobj = new bookInLysanderRateModel();
+    String totalAmount = lysanderRateModelobj.getTotalAmount();
+    if(totalAmount == "") 
+    {
+        totalAmount = "0";
+    } 
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -110,7 +121,7 @@
                             </div>
                             <div class="col">
                                 <div class="form" id="textbox">
-                                    <p>Calculated Total Amount</p>
+                                    <p>Calculated Total Amount<% out.println(totalAmount); %></p>
                                 </div>
                             </div>
                         </div>

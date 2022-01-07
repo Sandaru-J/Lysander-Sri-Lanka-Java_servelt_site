@@ -1,5 +1,7 @@
 package Model;
 
+import static java.lang.Boolean.TRUE;
+
 public class bookInLysanderCalculationModel {
 
     public String totalAmount;
@@ -17,19 +19,19 @@ public class bookInLysanderCalculationModel {
 
     bookInLysanderRateModel bookLysanderRateModelobj = new bookInLysanderRateModel();
     
-    public String calculateTotalAmount() {
+    public boolean calculateTotalAmount() {
         //calculating the amount for the selected room
         
         //sending the data to bookInLysanderRateModel
         bookLysanderRateModelobj.setTotalAmount(totalAmount);
-        return "TRUE";
+        return TRUE;
     }
 
     //function to calculate the paymentAmount
-    public String calculatePaymentAmount() {
+    public boolean calculatePaymentAmount() {
         //calculate the acmount for the 20%payment
         
         bookLysanderRateModelobj.setPaymentAmount(paymentAmount);
-        return "TRUE";
+        return TRUE;
     }
 }

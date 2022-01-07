@@ -13,6 +13,8 @@ public class bookInLysanderRateModel {
     
     //creating the object to bookInLysanderCalculationModel
     bookInLysanderCalculationModel bookLysanderCalculationobj = new bookInLysanderCalculationModel();
+    boolean totalAmountSuccess = bookLysanderCalculationobj.calculateTotalAmount();
+    boolean paymentAmountSuccess = bookLysanderCalculationobj.calculatePaymentAmount();
     
     //function to check if the user likes to pay the full amount
     public void checkPaymentAmount(String data) 

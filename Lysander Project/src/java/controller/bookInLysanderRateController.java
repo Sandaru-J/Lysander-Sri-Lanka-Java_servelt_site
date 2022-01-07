@@ -29,6 +29,8 @@ public class bookInLysanderRateController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
     {
+        //send a response to the bookInLysanderRate.jsp
+        
         //requests from bookInLysanderRates.jsp
         String paymentAmount = request.getParameter("paymentAmount");
         
