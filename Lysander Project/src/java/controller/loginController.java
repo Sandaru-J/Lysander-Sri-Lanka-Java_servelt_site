@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "loginController", urlPatterns = {"/loginController"})
 public class loginController extends HttpServlet {
@@ -42,17 +43,20 @@ public class loginController extends HttpServlet {
         
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+        String nic="Login";
+         HttpSession session = request.getSession();
+                session.setAttribute();
         //apply form inputs in to a getter
         String email = request.getParameter("guest_Email");
-        String nic = request.getParameter("guest_Name");
+        nic= request.getParameter("guest_Name");
         
         //check matching status of email and nic
         try{
             dbConModel con = new dbConModel();
             boolean match = con.checkLogin(email,nic);
             if(match==true)
-            {
+            {             
+                session.setAttribute("guest_Name",nic);
                 out.println("You have successfully logged!!!");
                 RequestDispatcher lrd = request.getRequestDispatcher("HomePage.jsp");
                 lrd.forward(request, response);
@@ -60,6 +64,8 @@ public class loginController extends HttpServlet {
             }else
             {
                 out.println("Email and NIC is not matching");
+                RequestDispatcher lrd = request.getRequestDispatcher("Error.html");
+                lrd.forward(request, response);
             }
         }catch(Exception se) {
             se.printStackTrace();

@@ -14,7 +14,7 @@ public class dbConModel {
     public Connection createConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
-         Statement st=con.createStatement();
+         //Statement st=con.createStatement();
              System.out.println("connection established successfully...!!");
         return con;
     }
@@ -23,7 +23,7 @@ public class dbConModel {
         boolean st = false;
         try {
 
-            PreparedStatement ps = createConnection().prepareStatement("select * from guest where guest_Email=? and guest_Name=?");
+            PreparedStatement ps = createConnection().prepareStatement("select * from guest where email=? and fName=?");
             ps.setString(1, guest_Email);
             ps.setString(2, guest_Name);
             ResultSet rs = ps.executeQuery();
