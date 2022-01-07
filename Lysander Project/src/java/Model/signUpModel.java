@@ -16,7 +16,7 @@ public class signUpModel {
     public void setguestFName(String setFName) { this.guestFName = setFName; }
     public void setguestLName(String setLName) { this.guestLName = setLName; }
     public void setguestEmail(String setEmail) { this.guestEmail = setEmail; }
-    public void setguestCountry(String setCountry) { this.guestCountry = setCountry; }
+public void setguestCountry(String setCountry) { this.guestCountry = setCountry; }
     public void setguestNic(String setNic) { this.guestNic = setNic; }
     public void setguestPhoneNumber(int setPhoneNumber) { this.guestPhoneNumber = setPhoneNumber; }
     
