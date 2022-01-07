@@ -48,22 +48,22 @@ public class loginController extends HttpServlet {
         String nic = request.getParameter("guest_Name");
         
         //check matching status of email and nic
-//        try{
-//            dbConModel con = new dbConModel();
-//            boolean match = con.checkLogin(email,nic);
-//            if(match==true)
-//            {
-//                out.println("You have successfully logged!!!");
-//                RequestDispatcher lrd = request.getRequestDispatcher("HomePage.jsp");
-//                lrd.forward(request, response);
-//                //logInfo=true;
-//            }else
-//            {
-//                out.println("Email and NIC is not matching");
-//            }
-//        }catch(Exception se) {
-//            se.printStackTrace();
-//        }
+        try{
+            dbConModel con = new dbConModel();
+            boolean match = con.checkLogin(email,nic);
+            if(match==true)
+            {
+                out.println("You have successfully logged!!!");
+                RequestDispatcher lrd = request.getRequestDispatcher("HomePage.jsp");
+                lrd.forward(request, response);
+                //logInfo=true;
+            }else
+            {
+                out.println("Email and NIC is not matching");
+            }
+        }catch(Exception se) {
+            se.printStackTrace();
+        }
     }
 
     /**

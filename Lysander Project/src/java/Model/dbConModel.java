@@ -5,9 +5,14 @@
  */
 package Model;
 
+import java.io.IOException;
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -23,7 +28,23 @@ public class dbConModel {
              System.out.println("connection established successfully...!!");
         return con;
     }
-    
+        public boolean checkLogin(String guest_Email, String guest_Name) {
+        boolean st=true;
+        try {
+
+            PreparedStatement ps = createConnection().prepareStatement("select * from guest where email=? and fName=?");
+            ps.setString(1, guest_Email);
+            ps.setString(2, guest_Name);
+            ResultSet rs = ps.executeQuery();
+            st = rs.next();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        out.println(st);
+        return st;
+
+    }
     public  boolean regUser(String fName, String lName, String email,String country,String Nic,String Pno) throws ClassNotFoundException, SQLException 
                 {
                     PreparedStatement ps = createConnection().prepareStatement("insert into guest values(?,?,?,?,?,?)");
