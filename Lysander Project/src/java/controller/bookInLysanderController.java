@@ -1,10 +1,13 @@
 
 package controller;
 
+import Model.dbConModel;
 import Model.bookInLysanderModel;
 import Model.bookInLysanderRateModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,28 +33,38 @@ public class bookInLysanderController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
     {
         //requests from the bookInLysander.jsp
+        String gName = request.getParameter("gFname");
         String region = request.getParameter("region");
         String checkInDate = request.getParameter("date");
         String checkOutDate = request.getParameter("date");
         String roomType = request.getParameter("roomType");
-        String roomsCount = request.getParameter("roomsCount");
         String adultsCount = request.getParameter("adultsCount");
         String kidsCount = request.getParameter("kidsCount");
         String packages = request.getParameter("packages");
         
         //object and setters to pass the data to **bookInLysanderModel**
         bookInLysanderModel bookLysanderobj = new bookInLysanderModel();
+        bookLysanderobj.setRegion(gName);
         bookLysanderobj.setRegion(region);
         bookLysanderobj.setCheckInDate(checkInDate);
         bookLysanderobj.setCheckOutDate(checkOutDate);
         bookLysanderobj.setRoomType(roomType);
-        bookLysanderobj.setRoomsCount(roomsCount);
         bookLysanderobj.setAdultsCount(adultsCount);
         bookLysanderobj.setKidsCount(kidsCount);
         bookLysanderobj.setPackages(packages);
-        
+       
+        int status=dbConModel.addBooking(bookLysanderobj);
+        if(status>0)
+        {
+            out.print("<p>Booking Recorded!!!</P>");
+            RequestDispatcher rs = request.getRequestDispatcher("welcome.html");
+            rs.include(request, response);
+        }else{
+            out.println("Booking not Caputured");
+                        RequestDispatcher rs = request.getRequestDispatcher("Error.html");
+                        rs.include(request, response);
+        }
         //forward to bookInLysanderRateController
-        
     }
 
     @Override

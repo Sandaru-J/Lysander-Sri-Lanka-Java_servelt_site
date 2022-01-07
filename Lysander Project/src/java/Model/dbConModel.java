@@ -10,15 +10,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Sandaru Jayathilaka
  */
 public class dbConModel {
-    public Connection createConnection() throws ClassNotFoundException, SQLException {
+    public static Connection createConnection() throws ClassNotFoundException, SQLException {
+        Connection con=null;
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
          Statement st=con.createStatement();
              System.out.println("connection established successfully...!!");
         return con;
@@ -41,4 +44,35 @@ public class dbConModel {
                         return false;                   
                     
                 }
+    public  static int addBooking(bookInLysanderModel bookLysanderobj){
+    int status=0;
+          
+        try {
+            Connection con=dbConModel.createConnection();
+            PreparedStatement ps = con.prepareStatement("insert into bookings values(?,?,?,?,?,?,?,?)");
+            
+            //bookingID has made into auto increment and we hope it will increase xd(:
+            ps.setString(1,bookLysanderobj. getgName());
+            ps.setString(2, bookLysanderobj.getRegion());
+            ps.setString(3, bookLysanderobj.getCheckInDate());
+            ps.setString(4, bookLysanderobj.getCheckOutDate());
+            ps.setString(5, bookLysanderobj.getRoomType());
+            ps.setString(6, bookLysanderobj.getAdultsCount());
+            ps.setString(7, bookLysanderobj.getKidsCount());
+            ps.setString(8, bookLysanderobj.getPackages());    
+            
+            status=ps.executeUpdate();
+            //con.close();
+                 
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(dbConModel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(dbConModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+  
+    return status;
 }
+    
+    
+}
+    
