@@ -1,26 +1,35 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Model;
 
-import java.sql.*;
-
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.io.PrintWriter;
+import static java.lang.System.out;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
+/**
+ *
+ * @author Sandaru Jayathilaka
+ */
 public class dbConModel {
-
     public Connection createConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
-         //Statement st=con.createStatement();
+         Statement st=con.createStatement();
              System.out.println("connection established successfully...!!");
         return con;
     }
-
-    public boolean checkLogin(String guest_Email, String guest_Name) {
-        boolean st = false;
+        public boolean checkLogin(String guest_Email, String guest_Name) {
+        boolean st=true;
         try {
 
             PreparedStatement ps = createConnection().prepareStatement("select * from guest where email=? and fName=?");
@@ -32,7 +41,6 @@ public class dbConModel {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return st;
 
     }
@@ -47,10 +55,10 @@ public class dbConModel {
                     ps.setString(6, Pno);
                     int i = ps.executeUpdate();
 
-                    if(i > 0) 
+                   if(i > 0) 
                         return true;
                       else
-                        return false;
+                        return false;                   
                     
                 }
 }

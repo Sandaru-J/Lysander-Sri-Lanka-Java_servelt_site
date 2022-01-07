@@ -45,7 +45,7 @@ public class loginController extends HttpServlet {
         PrintWriter out = response.getWriter();
         String nic="Login";
          HttpSession session = request.getSession();
-                session.setAttribute();
+                session.setAttribute("guest_Name",nic);
         //apply form inputs in to a getter
         String email = request.getParameter("guest_Email");
         nic= request.getParameter("guest_Name");
