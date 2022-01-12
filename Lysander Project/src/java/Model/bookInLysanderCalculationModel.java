@@ -6,7 +6,7 @@ public class bookInLysanderCalculationModel {
 
     public String totalAmount;
     public String paymentAmount;
-
+    
     bookInLysanderModel bookLysanderModelobj = new bookInLysanderModel();
     String region = bookLysanderModelobj.getRegion();
     String checkInDate = bookLysanderModelobj.getCheckInDate();
@@ -17,21 +17,21 @@ public class bookInLysanderCalculationModel {
     String kidsCount = bookLysanderModelobj.getKidsCount();
     String packages = bookLysanderModelobj.getPackages();
 
-    bookInLysanderRateModel bookLysanderRateModelobj = new bookInLysanderRateModel();
     
     public boolean calculateTotalAmount() {
-        //calculating the amount for the selected room
+        String calculatedTotalAmount = null;
         
-        //sending the data to bookInLysanderRateModel
-        bookLysanderRateModelobj.setTotalAmount(totalAmount);
+        //calculate the total Amount
+        totalAmount = calculatedTotalAmount;
         return TRUE;
     }
 
     //function to calculate the paymentAmount
     public boolean calculatePaymentAmount() {
-        //calculate the acmount for the 20%payment
+        String calculatedPaymentAmount = null;
         
-        bookLysanderRateModelobj.setPaymentAmount(paymentAmount);
+        //calculate the acmount for the 20%payment
+        paymentAmount = calculatedPaymentAmount;
         return TRUE;
     }
 }
