@@ -8,6 +8,7 @@ package Model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -22,7 +23,7 @@ public class dbConModel {
         Connection con=null;
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "");
-         Statement st=con.createStatement();
+         //Statement st=con.createStatement();
              System.out.println("connection established successfully...!!");
         return con;
     }
@@ -44,6 +45,24 @@ public class dbConModel {
                         return false;                   
                     
                 }
+    public  boolean checkLogin(String email,String pass) 
+                {
+                  boolean st =false;
+                  try {
+                    
+                      PreparedStatement ps = createConnection().prepareStatement("select * from guest where fName=? and Nic=?");
+                      ps.setString(1, email);
+                      ps.setString(2, pass);
+                      ResultSet rs =ps.executeQuery();
+                      st = rs.next();
+                  }
+                    catch(Exception e) {
+                        e.printStackTrace();
+                    }
+        
+                     return st;   
+    
+               }
     public  static int addBooking(bookInLysanderModel bookLysanderobj){
     int status=0;
           
@@ -72,6 +91,8 @@ public class dbConModel {
   
     return status;
 }
+    
+    
     
     
 }

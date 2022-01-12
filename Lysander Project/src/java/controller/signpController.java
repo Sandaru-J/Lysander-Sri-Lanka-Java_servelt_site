@@ -87,6 +87,8 @@ public class signpController extends HttpServlet {
                boolean rslt=con.regUser(FName,LName,Email,Country,Nic,PhoneNumber);
                if(rslt==true){
                     out.println("You have successfully registered!!!");
+                    RequestDispatcher rs = request.getRequestDispatcher("SignUpSuccess.html");
+                        rs.include(request, response);
                }               
                 else
                {

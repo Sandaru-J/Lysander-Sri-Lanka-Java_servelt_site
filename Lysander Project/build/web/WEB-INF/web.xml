@@ -16,6 +16,10 @@
         <servlet-name>bookInLysanderCardDetailsController</servlet-name>
         <servlet-class>controller.bookInLysanderCardDetailsController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BookinData</servlet-name>
+        <servlet-class>controller.bookInLysanderController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signpController</servlet-name>
         <url-pattern>/signpController</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>bookInLysanderCardDetailsController</servlet-name>
         <url-pattern>/bookInLysanderCardDetailsController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookinData</servlet-name>
+        <url-pattern>/bookLysanderController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

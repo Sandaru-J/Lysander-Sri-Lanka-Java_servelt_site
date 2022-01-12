@@ -118,7 +118,7 @@ and open the template in the editor.
 
                     <div class="form-group mb-3">
                         <label for="exampleFormControlInput1" id="label_name">Username</label>
-                        <input class="form-control" type="text" value="<% out.println("UserName Took From The SESSION"); %>" aria-label="readonly input example" readonly>
+                        <input class="form-control" type="text" name="gFname" value="<% out.println("UserName Took From The SESSION"); %>" aria-label="readonly input example" readonly>
                     </div>
                     <div class="form-floating mb-3">
 

@@ -12,7 +12,7 @@ public class bookInLysanderCalculationModel {
     String checkInDate = bookLysanderModelobj.getCheckInDate();
     String checkOutDate = bookLysanderModelobj.getCheckOutDate();
     String roomType = bookLysanderModelobj.getRoomType();
-    String roomsCount = bookLysanderModelobj.getRoomCount();
+    //String roomsCount = bookLysanderModelobj.getRoomCount();
     String adultsCount = bookLysanderModelobj.getAdultsCount();
     String kidsCount = bookLysanderModelobj.getKidsCount();
     String packages = bookLysanderModelobj.getPackages();
