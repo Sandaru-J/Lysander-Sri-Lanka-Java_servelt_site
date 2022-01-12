@@ -4,6 +4,12 @@
     Author     : USER
 --%>
 
+
+<%@page import="Model.bookInLysanderRateModel"%>
+<%
+    
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -61,6 +67,10 @@
             color: #9e6c1c;
             text-align: center;
         }
+        .headingRoomAvailability {
+            font-size: 25px;
+            text-align: center;
+        }
         .heading#booking
         {
             font-size: 35px;
@@ -99,6 +109,7 @@
             <div class="p-3 border bg-light" id="rightcolumn">
 
                 <p class="heading">Rates</p>
+                <p class="headingRoomAvailability">${roomAvailability}</p>
                 <form action="bookInLysanderRateController" method="POST">
 
                     <div class="container2 mb-3">
@@ -110,7 +121,7 @@
                             </div>
                             <div class="col">
                                 <div class="form" id="textbox">
-                                    <p>Calculated Total Amount</p>
+                                    <p>Calculated Total Amount ${totalAmount}</p>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +137,7 @@
                             </div>
                             <div class="col">
                                 <div class="form" id="textbox">
-                                    <p>calculated 20% || (20% of Total Amount need to pay in advance) </p>
+                                    <p>calculated Amount 20% ${paymentAmount}</p>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +159,7 @@
                         </div>
                     </div>  
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-secondary" id="buttons">OK</button>
+                        <button type="submit" name="submitDONE" class="btn btn-secondary" id="buttons">OK</button>
                     </div><br>
                 </form>
             </div>

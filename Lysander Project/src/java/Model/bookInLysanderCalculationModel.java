@@ -1,10 +1,12 @@
 package Model;
 
+import static java.lang.Boolean.TRUE;
+
 public class bookInLysanderCalculationModel {
 
     public String totalAmount;
     public String paymentAmount;
-
+    
     bookInLysanderModel bookLysanderModelobj = new bookInLysanderModel();
     String region = bookLysanderModelobj.getRegion();
     String checkInDate = bookLysanderModelobj.getCheckInDate();
@@ -15,21 +17,21 @@ public class bookInLysanderCalculationModel {
     String kidsCount = bookLysanderModelobj.getKidsCount();
     String packages = bookLysanderModelobj.getPackages();
 
-    bookInLysanderRateModel bookLysanderRateModelobj = new bookInLysanderRateModel();
     
-    public String calculateTotalAmount() {
-        //calculating the amount for the selected room
+    public boolean calculateTotalAmount() {
+        String calculatedTotalAmount = null;
         
-        //sending the data to bookInLysanderRateModel
-        bookLysanderRateModelobj.setTotalAmount(totalAmount);
-        return "TRUE";
+        //calculate the total Amount
+        totalAmount = calculatedTotalAmount;
+        return TRUE;
     }
 
     //function to calculate the paymentAmount
-    public String calculatePaymentAmount() {
-        //calculate the acmount for the 20%payment
+    public boolean calculatePaymentAmount() {
+        String calculatedPaymentAmount = null;
         
-        bookLysanderRateModelobj.setPaymentAmount(paymentAmount);
-        return "TRUE";
+        //calculate the acmount for the 20%payment
+        paymentAmount = calculatedPaymentAmount;
+        return TRUE;
     }
 }
