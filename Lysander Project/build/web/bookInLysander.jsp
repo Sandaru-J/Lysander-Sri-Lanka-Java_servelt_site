@@ -132,7 +132,7 @@ and open the template in the editor.
                             <div class="row align-items-start">
                                 <div class="col">
                                     <label class="control-label" for="date">Check-In</label>
-                                    <input class="form-control" id="date" name="checkindate" placeholder="Check-In" type="text"/>
+                                    <input class="form-control" id="date" name="date" placeholder="Check-In" type="text"/>
                                 </div>
                                 <div class="col">
                                     <label class="control-label" for="date">Check-Out  </label>
