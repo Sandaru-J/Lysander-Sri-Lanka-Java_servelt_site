@@ -1900,11 +1900,6 @@
 		</path>
 	</svg>
 
-  <!-- Button to Choose the country in Home Page -->
-	<div id="SRI_LANKA">
-		<button class="button_choose_country" onclick="myFunctionChooseCountryWindowOpen()">$ { Country }</button>
-	</div>
-
 	<!-- About Us link in the Header -->
 	<a href="">
 	<div id="ABOUT_US_t">
@@ -1959,14 +1954,14 @@
 	</button>	
 
 	<!-- Rooms and Suits link in the header -->
-	<a href="">
+	<a href="Rooms&Suites.html">
 		<div id="Rooms__Suits">
 			<span>ROOMS & SUITS</span>
 		</div>
 	</a>
 
 	<!-- Dining link in the header -->
-	<a href="">
+	<a href="dining.html">
 	<div id="Dining">
 		<span>DINING</span>
 	</div>
@@ -1987,7 +1982,7 @@
 	</a>
 
 	<!-- Wedding link in the head -->
-	<a href="">
+	<a href="wedding.html">
 	<div id="WEDDING">
 		<span>WEDDING</span>
 	</div>
