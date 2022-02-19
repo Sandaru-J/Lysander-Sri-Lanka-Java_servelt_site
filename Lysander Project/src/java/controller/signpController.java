@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Model.dbConModel;
 /**
- *
+ * get close
  * @author Sandaru Jayathilaka
  */
 public class signpController extends HttpServlet {
