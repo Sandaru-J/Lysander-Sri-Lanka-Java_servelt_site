@@ -10,7 +10,8 @@ public class bookInLysanderModel {
     private String adultsCount;
     private String kidsCount;
     private String packages;
-    
+    private String pack;
+
     public void setRegion(String region) { this.region = region; }
     public void setCheckInDate(String checkInDate) { this.checkInDate = checkInDate; }
     public void setCheckOutDate(String checkOutDate) { this.checkOutDate = checkOutDate; }
