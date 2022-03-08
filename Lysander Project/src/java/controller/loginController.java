@@ -30,6 +30,7 @@ public class loginController extends HttpServlet {
             out.println("</html>");
         }
     }
+    //checked
     //public boolean logInfo;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
